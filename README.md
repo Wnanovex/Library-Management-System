@@ -45,7 +45,7 @@ This project follows the **three-tier architecture**:
 
 ```bash
 git clone https://github.com/Wnanovex/Library-Management-System.git
-cd LibraryManagementSystem
+cd Library-Management-System
 ```
 
 #### 2. **Restore the database**
@@ -57,10 +57,10 @@ cd LibraryManagementSystem
   3. Click New Query
 
   4. Restore the database
-    ```sql
+```sql
     RESTORE DATABASE LibraryDB
     FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\LibraryDB.bak';
-    ```
+```
 
 #### 3. **Open the solution**
 
@@ -68,7 +68,7 @@ Open LibraryManagementSystem.UI.sln in Visual Studio
 
 #### 4. **Configure the database connection**
 
-Edit the connection string in `LibraryManagementSystem.DAL\DBConnection.cs`
+Edit the connection string in `LibraryManagementSystem.DAL\clsDataAccessSettings.cs`
 
 ```csharp
     string connectionString = "Server=YOUR_SERVER_NAME;Database=LibraryDB;User Id=your_user;Password=your_password;";
